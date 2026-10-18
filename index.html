@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noir & Grain | Good food, no small talk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">N<span>.</span></span><span>NOIR <i>&</i> GRAIN<small>GOOD FOOD, NO SMALL TALK</small></span></a>
+  <nav><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#footer">Contact</a></nav>
+  <button class="cart-button" id="cartOpen">Your bag <span id="cartCount">0</span></button>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow"><span></span> FRESH OFF THE GRILL</p>
+    <h1>Crave it.<br><em>We make it.</em></h1>
+    <p class="hero-text">Big flavours, honest ingredients, and the kind of food that makes your day better.</p>
+    <a class="primary-btn" href="#menu">Explore the menu <b>↗</b></a>
+    <div class="hero-meta"><div class="avatar-stack"><span>R</span><span>A</span><span>M</span></div><div><strong>4.8/5</strong><small>Loved by 2,000+ hungry people</small></div></div>
+  </div>
+  <div class="hero-image"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1300&q=90" alt="Gourmet burger and fries"><div class="image-note"><span>✦</span><div><strong>Made fresh, always</strong><small>Quality you can taste</small></div></div><div class="round-stamp">GOOD<br>FOOD<br><b>★</b></div></div>
+</section>
+<section class="benefits" id="story"><div><span>✦</span><p><b>Fresh ingredients</b><small>Picked with care, every day</small></p></div><div><span>◷</span><p><b>Quick delivery</b><small>At your door in 25–35 min</small></p></div><div><span>♡</span><p><b>Made with love</b><small>Every bite, worth it</small></p></div></section>
+<section class="menu-section" id="menu">
+  <div class="section-heading"><div><p class="eyebrow">THE GOOD STUFF</p><h2>Our <em>favourites.</em></h2></div><label class="search"><span>⌕</span><input id="search" placeholder="Search something tasty..." aria-label="Search menu"></label></div>
+  <div class="filters" id="filters"><button class="filter active" data-category="All">All items</button><button class="filter" data-category="Burgers">Burgers</button><button class="filter" data-category="Pizza">Pizza</button><button class="filter" data-category="Pasta">Pasta</button><button class="filter" data-category="Sides">Sides</button><button class="filter" data-category="Desserts">Desserts</button><button class="filter" data-category="Drinks">Drinks</button></div>
+  <div class="menu-grid" id="menuGrid"><div class="loading">Preparing the good stuff…</div></div>
+</section>
+<section class="quote"><span>“</span><p>Good food is not just fuel. It's a little moment of happiness.</p><small>— THE NOIR & GRAIN KITCHEN</small></section>
+</main>
+<footer id="footer"><a class="brand" href="#"><span class="brand-mark">N<span>.</span></span><span>NOIR <i>&</i> GRAIN<small>GOOD FOOD, NO SMALL TALK</small></span></a><p>Made fresh. Served happy.</p><small>© 2026 Noir & Grain. A Java Food Cart demo project.</small></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+  <div class="cart-head"><div><p class="eyebrow">YOUR ORDER</p><h2>Your <em>bag.</em></h2></div><button class="icon-btn" id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="cart-items" id="cartItems"><div class="empty-cart">Your bag is waiting for something delicious.</div></div>
+  <div class="cart-bottom"><div class="bill-row"><span>Subtotal</span><b id="subtotal">₹0</b></div><div class="bill-row"><span>Delivery</span><b id="delivery">₹0</b></div><div class="bill-row total"><span>Total</span><b id="total">₹0</b></div><button class="primary-btn checkout-btn" id="checkoutOpen">Continue to checkout <b>↗</b></button><small class="cart-note">Free delivery on orders above ₹499</small></div>
+</aside>
+
+<div class="modal-wrap" id="checkoutModal">
+  <div class="modal"><button class="icon-btn modal-x" id="checkoutClose">✕</button><p class="eyebrow">ALMOST THERE</p><h2>Checkout <em>time.</em></h2><p class="modal-sub">Where should we bring your favourites?</p>
+    <form id="checkoutForm"><label>Your name<input name="customerName" required placeholder="Full name"></label><label>Phone number<input name="phone" required type="tel" pattern="[0-9+() -]{8,18}" placeholder="Your contact number"></label><label>Delivery address<textarea name="address" required rows="2" placeholder="House, street, area, city"></textarea></label><label>Payment method<select name="paymentMethod"><option>Cash on delivery</option><option>UPI on delivery</option></select></label><div class="checkout-total"><span>Order total</span><strong id="checkoutTotal">₹0</strong></div><button class="primary-btn checkout-btn" type="submit">Place my order <b>↗</b></button></form><div id="orderMessage" class="order-message" role="status"></div>
+  </div>
+</div>
+<script src="/app.js"></script>
+</body></html>
